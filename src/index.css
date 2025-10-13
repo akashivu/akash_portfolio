@@ -25,16 +25,32 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    #f8fafc,
+    #f5f3ff,
+    #fdf4ff
+  );
+  background-attachment: fixed;
 }
+
+.dark body {
+  background: linear-gradient(
+    to bottom right,
+    #0f172a,
+    #1e1b4b,
+    #1e293b
+  );
+  background-attachment: fixed;
+}
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 button {

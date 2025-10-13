@@ -1,10 +1,13 @@
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-extrabold mb-4">
-       Akash-portfolio
-      </h1>
-      
+    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+      <Navbar />
+     
+        <Home />
+     
     </div>
   );
 }
