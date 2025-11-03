@@ -1,17 +1,23 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowRight, Download, Sparkles } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  Download,
+  Sparkles,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <section
-  id="home"
-  className="relative min-h-screen w-full flex flex-col justify-center items-center text-center overflow-hidden px-4 pt-20"
->
-
-      
+      id="home"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center text-center overflow-hidden px-4 pt-20"
+    >
+      {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-purple-50 to-fuchsia-50 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-900" />
 
-      
+      {/* Animated blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -25,9 +31,9 @@ export default function Home() {
         />
       </div>
 
-      
+      {/* Main content */}
       <div className="relative z-10 max-w-5xl mx-auto">
-       
+        {/* Availability badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,28 +46,27 @@ export default function Home() {
           </span>
         </motion.div>
 
-       
+        {/* Name + title */}
         <motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
->
-  Hi, I'm{" "}
-  <span className="relative inline-block">
-    <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-purple-600 to-fuchsia-600 animate-gradient">
-      Akash Patil
-    </span>
-    <motion.span
-      animate={{ opacity: [0.5, 0.8, 0.5] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute inset-0 blur-2xl bg-gradient-to-r from-fuchsia-600 via-purple-600 to-fuchsia-600"
-    />
-  </span>
-</motion.h1>
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
+        >
+          Hi, I'm{" "}
+          <span className="relative inline-block">
+            <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-purple-600 to-fuchsia-600 animate-gradient">
+              Akash Patil
+            </span>
+            <motion.span
+              animate={{ opacity: [0.5, 0.8, 0.5] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 blur-2xl bg-gradient-to-r from-fuchsia-600 via-purple-600 to-fuchsia-600"
+            />
+          </span>
+        </motion.h1>
 
-
-        
+        {/* Subheading */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -73,13 +78,21 @@ export default function Home() {
           </p>
           <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Crafting scalable, efficient, and elegant web applications with{" "}
-            <span className="font-semibold text-fuchsia-600 dark:text-fuchsia-400">Java</span>,{" "}
-            <span className="font-semibold text-purple-600 dark:text-purple-400">Spring Boot</span>, and{" "}
-            <span className="font-semibold text-fuchsia-600 dark:text-fuchsia-400">React</span>
+            <span className="font-semibold text-fuchsia-600 dark:text-fuchsia-400">
+              Java
+            </span>
+            ,{" "}
+            <span className="font-semibold text-purple-600 dark:text-purple-400">
+              Spring Boot
+            </span>
+            , and{" "}
+            <span className="font-semibold text-fuchsia-600 dark:text-fuchsia-400">
+              React
+            </span>
           </p>
         </motion.div>
 
-        
+        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,7 +124,7 @@ export default function Home() {
           </motion.a>
         </motion.div>
 
-        
+        {/* Social links */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -123,7 +136,11 @@ export default function Home() {
           </span>
           <div className="flex gap-3">
             {[
-              { icon: Github, href: "https://github.com/Akashivu-github", label: "GitHub" },
+              {
+                icon: Github,
+                href: "https://github.com/Akashivu-github",
+                label: "GitHub",
+              },
               { icon: Linkedin, href: "https://linkedin.com/in/", label: "LinkedIn" },
               { icon: Mail, href: "mailto:akashivu002@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
@@ -144,7 +161,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-     
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
@@ -158,18 +175,6 @@ export default function Home() {
           <div className="w-1.5 h-3 bg-fuchsia-600 rounded-full" />
         </div>
       </motion.div>
-
-      
-      <style jsx>{`
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
     </section>
   );
 }
