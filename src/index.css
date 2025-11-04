@@ -84,3 +84,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+html { scroll-behavior: smooth; }
+.section { scroll-margin-top: 6rem; } 
