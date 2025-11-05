@@ -8,13 +8,13 @@ export default function Footer() {
 
   return (
     <footer className="relative mt-20 bg-slate-50 dark:bg-slate-950">
-      {/* Gradient divider */}
+      
       <div className="h-px bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent"></div>
       
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* Main footer content */}
+       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Left: Brand & Description */}
+          
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 to-purple-600 bg-clip-text text-transparent">
               Akash.dev
@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Middle: Quick Links */}
+          
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
               Navigation
@@ -50,14 +50,14 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Right: Connect */}
+          
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
               Connect
             </h4>
             <div className="flex flex-col gap-3">
               <a
-                href="https://github.com/Akashivu-github"
+                href="https://github.com/akashivu"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors"
@@ -91,10 +91,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
+       
         <div className="h-px bg-slate-200 dark:bg-slate-800 mb-8"></div>
 
-        {/* Bottom bar */}
+       
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left">
             © {new Date().getFullYear()} Akash Patil. Crafted with{' '}
@@ -112,7 +112,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Background decoration */}
+     
       <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-500/5 to-transparent pointer-events-none"></div>
     </footer>
   );

@@ -61,7 +61,7 @@ export default function Home() {
           </span>
           <div className="flex gap-3">
             <a
-              href="https://github.com/Akashivu-github"
+              href="https://github.com/akashivu"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300 group"

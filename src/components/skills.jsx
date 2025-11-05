@@ -25,7 +25,7 @@ const SKILLS = {
     icon: Database,
     skills: [
       "MySQL",
-      "OracleDB",
+      "PostgreSQL",
       "H2 Database",
     ]
   },
@@ -54,7 +54,7 @@ function SkillCategory({ category, data }) {
   
   return (
     <div className="group relative rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
-      {/* Icon and Title */}
+      
       <div className="flex items-center gap-3 mb-5">
         <div className="p-2.5 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform duration-300">
           <Icon className="h-5 w-5" />
@@ -64,7 +64,7 @@ function SkillCategory({ category, data }) {
         </h3>
       </div>
 
-      {/* Skills Grid */}
+     
       <div className="flex flex-wrap gap-2">
         {data.skills.map((skill) => (
           <span
@@ -83,7 +83,7 @@ export default function Skills() {
   return (
     <section id="skills" className="min-h-screen py-20 px-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Skills & Technologies
@@ -93,14 +93,14 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Skills Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(SKILLS).map(([category, data]) => (
             <SkillCategory key={category} category={category} data={data} />
           ))}
         </div>
 
-        {/* Optional: Stats or Additional Info */}
+       
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
             <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">

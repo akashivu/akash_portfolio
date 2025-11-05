@@ -7,7 +7,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Apply theme
+ 
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
@@ -16,7 +16,7 @@ export default function Navbar() {
     }
   }, [dark]);
 
-  // Scroll behavior and active section detection
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+         
           <a
             href="#home"
             className="group font-bold text-xl sm:text-2xl text-slate-900 dark:text-white transition-colors"
@@ -60,7 +60,7 @@ export default function Navbar() {
             </span>
           </a>
 
-          {/* Desktop Navigation */}
+          
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.toLowerCase();
@@ -80,9 +80,9 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Actions */}
+          
           <div className="flex items-center gap-2">
-            {/* Theme Toggle */}
+            
             <button
               onClick={() => setDark((prev) => !prev)}
               className="p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-purple-400 dark:hover:border-purple-500 transition-all"
@@ -95,7 +95,7 @@ export default function Navbar() {
               )}
             </button>
 
-            {/* Mobile Menu Button */}
+           
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
@@ -110,7 +110,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
             isOpen ? "max-h-64 pb-4" : "max-h-0"
