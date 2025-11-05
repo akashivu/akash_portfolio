@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex flex-col justify-center items-center px-4 pt-16 bg-gradient-to-br from-white via-purple-50/30 to-white dark:from-slate-900 dark:via-purple-950/20 dark:to-slate-900"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center px-4 pt-16 bg-gradient-to-br from-white via-purple-50/30 to-white dark:from-slate-700 dark:via-purple-700/20 dark:to-slate-700"
     >
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-800">
@@ -27,11 +27,13 @@ export default function Home() {
             Full-Stack Developer
           </p>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Building scalable web applications with modern technologies. 
-            Specialized in <span className="font-semibold text-purple-600 dark:text-purple-400">React</span>, 
-            <span className="font-semibold text-purple-600 dark:text-purple-400"> Spring Boot</span>, and 
-            <span className="font-semibold text-purple-600 dark:text-purple-400"> Cloud Solutions</span>.
-          </p>
+  Visionary Full-Stack Developer focused on building <span className="font-semibold text-purple-600 dark:text-purple-400">scalable, high-performance web applications</span>.  
+  Skilled in <span className="font-semibold text-purple-600 dark:text-purple-400">React.js</span>, 
+  <span className="font-semibold text-purple-600 dark:text-purple-400"> Spring Boot</span>, 
+  <span className="font-semibold text-purple-600 dark:text-purple-400"> REST APIs</span>, and 
+  <span className="font-semibold text-purple-600 dark:text-purple-400"> Cloud Deployment</span>.
+</p>
+
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">

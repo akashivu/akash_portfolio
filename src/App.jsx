@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./components/projects";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -11,7 +13,8 @@ export default function App() {
       <Home />
        <Projects />
       <Skills/>
-     
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
