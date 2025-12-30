@@ -1,119 +1,102 @@
 'use client';
-import { Github, Linkedin, Mail, Heart, ArrowUp } from "lucide-react";
+
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="relative mt-20 bg-slate-50 dark:bg-slate-950">
-      
-      <div className="h-px bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent"></div>
-      
-      <div className="max-w-6xl mx-auto px-4 py-16">
-       
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          
+    <footer className="bg-slate-900 text-slate-400">
+      {/* Top divider */}
+      <div className="h-px bg-slate-800" />
+
+      <div className="max-w-7xl mx-auto px-4 py-14">
+        {/* Main grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+
+          {/* Brand / About */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 to-purple-600 bg-clip-text text-transparent">
-              Akash.dev
+            <h3 className="text-xl font-semibold text-white">
+              Akash Patil
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Passionate full-stack developer crafting scalable web applications with modern technologies. Specializing in React, Spring Boot, and cloud solutions.
+            <p className="text-sm leading-relaxed max-w-sm">
+              Full-Stack Developer with applied data science experience,
+              focused on building clean, scalable, and production-ready
+              web systems.
             </p>
-            <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </span>
-              <span className="font-medium text-green-600 dark:text-green-400">Available for opportunities</span>
-            </div>
           </div>
 
-          
+          {/* Navigation */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
               Navigation
             </h4>
-            <nav className="flex flex-col gap-3">
-              {['Home', 'Projects', 'Skills', 'Contact'].map((item) => (
+            <nav className="flex flex-col gap-2 text-sm">
+              {["Home", "Skills", "Projects", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="group inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors w-fit"
+                  className="hover:text-white transition-colors w-fit"
                 >
-                  <span className="w-0 group-hover:w-2 h-px bg-fuchsia-600 transition-all duration-300"></span>
                   {item}
                 </a>
               ))}
             </nav>
           </div>
 
-          
+          {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
-              Connect
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+              Contact
             </h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 text-sm">
               <a
                 href="https://github.com/akashivu"
                 target="_blank"
-                rel="noreferrer"
-                className="group flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <div className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-900/20 transition-colors">
-                  <Github className="h-4 w-4" />
-                </div>
-                <span className="text-sm">GitHub</span>
+                <Github className="h-4 w-4" />
+                GitHub
               </a>
               <a
-                href="https://linkedin.com/in/"
+                href="https://linkedin.com/in/akash-patil"
                 target="_blank"
-                rel="noreferrer"
-                className="group flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <div className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-900/20 transition-colors">
-                  <Linkedin className="h-4 w-4" />
-                </div>
-                <span className="text-sm">LinkedIn</span>
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
               </a>
               <a
                 href="mailto:akashivu002@gmail.com"
-                className="group flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors"
+                className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <div className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-900/20 transition-colors">
-                  <Mail className="h-4 w-4" />
-                </div>
-                <span className="text-sm">akashivu002@gmail.com</span>
+                <Mail className="h-4 w-4" />
+                akashivu002@gmail.com
               </a>
             </div>
           </div>
         </div>
 
-       
-        <div className="h-px bg-slate-200 dark:bg-slate-800 mb-8"></div>
-
-       
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left">
-            © {new Date().getFullYear()} Akash Patil. Crafted with{' '}
-            <Heart className="inline h-4 w-4 text-red-500 fill-red-500 animate-pulse" />{' '}
-            using React & Tailwind CSS
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-t border-slate-800 pt-6">
+          <p className="text-xs text-slate-500">
+            © {new Date().getFullYear()} Akash Patil. All rights reserved.
           </p>
+
           <button
             onClick={scrollToTop}
-            className="group flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-purple-600 text-slate-700 dark:text-slate-300 hover:text-white transition-all duration-300"
+            className="flex items-center gap-2 text-xs text-slate-400 hover:text-white transition-colors"
             aria-label="Back to top"
           >
-            <span className="text-sm font-medium">Back to Top</span>
-            <ArrowUp className="h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+            Back to top
+            <ArrowUp className="h-3.5 w-3.5" />
           </button>
         </div>
       </div>
-
-     
-      <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-500/5 to-transparent pointer-events-none"></div>
     </footer>
   );
 }

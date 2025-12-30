@@ -1,103 +1,161 @@
 import React from "react";
-import { Github, Linkedin, Mail, ArrowRight, Download, Code2 } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Download,
+  Code2,
+  Database,
+  Cloud,
+  Cpu,
+} from "lucide-react";
 
 export default function Home() {
+  const stats = [
+    { number: "15+", label: "Technologies Used" },
+    { number: "5+", label: "Production-Ready Projects" },
+    { number: "110+", label: "DSA Problems Solved" },
+  ];
+
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex flex-col justify-center items-center px-4 pt-16 bg-gradient-to-br from-white via-purple-50/30 to-white dark:from-slate-700 dark:via-purple-700/20 dark:to-slate-700"
+      className="relative min-h-screen w-full flex items-center px-4 pt-16 overflow-hidden"
     >
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-800">
-          <Code2 className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-          <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
-            Available for Internship & Full-time
-          </span>
-        </div>
+      {/* ===== BACKGROUND LAYERS ===== */}
+      {/* 75% main background */}
+      <div className="absolute inset-0 bg-white dark:bg-slate-900 z-0" />
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-slate-900 dark:text-white">Hi, I'm </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800 dark:from-purple-400 dark:to-purple-600">
+      {/* 25% accent background (right side) */}
+      <div className="absolute top-0 right-0 h-full w-[25%] bg-blue-50 dark:bg-slate-800 z-0" />
+
+      {/* ===== CONTENT ===== */}
+      <div className="relative z-10 max-w-5xl mx-auto w-full text-gray-900 dark:text-white">
+        <div className="text-left mb-16">
+          {/* Availability Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+              Open to Full-Time · Internship · Applied ML Roles
+            </span>
+          </div>
+
+          {/* Name */}
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight">
             Akash Patil
-          </span>
-        </h1>
+          </h1>
 
-        <div className="mb-8 space-y-4">
-          <p className="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-slate-200">
-            Full-Stack Developer
+          {/* Role */}
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-slate-700 dark:text-slate-300">
+            Full-Stack Developer · Applied Data Science & AI/ML Engineering
+          </h2>
+
+          {/* Focus line */}
+          <div className="text-lg md:text-xl font-medium mb-6 text-slate-600 dark:text-slate-400">
+            Backend · Data Science · ML Inference · Cloud Systems
+          </div>
+
+          {/* Description */}
+          <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mb-8 leading-relaxed">
+            I build scalable, data-driven web applications using{" "}
+            <span className="font-medium text-slate-800 dark:text-slate-200">
+              Java, Spring Boot, React.js
+            </span>
+            , and cloud platforms. I also work on{" "}
+            <span className="font-medium text-slate-800 dark:text-slate-200">
+              applied data science and AI/ML systems
+            </span>
+            — designing feature pipelines, serving Python-based ML inference,
+            and converting behavioral data into actionable insights through
+            clean, production-ready architecture.
           </p>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-  Visionary Full-Stack Developer focused on building <span className="font-semibold text-purple-600 dark:text-purple-400">scalable, high-performance web applications</span>.  
-  Skilled in <span className="font-semibold text-purple-600 dark:text-purple-400">React.js</span>, 
-  <span className="font-semibold text-purple-600 dark:text-purple-400"> Spring Boot</span>, 
-  <span className="font-semibold text-purple-600 dark:text-purple-400"> REST APIs</span>, and 
-  <span className="font-semibold text-purple-600 dark:text-purple-400"> Cloud Deployment</span>.
-</p>
 
-        </div>
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 mb-12">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition"
+            >
+              Contact Me
+            </a>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Get In Touch
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg font-medium hover:border-slate-400 dark:hover:border-slate-600 transition"
+            >
+              <Download className="h-4 w-4" />
+              Resume
+            </a>
+          </div>
 
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg font-semibold border-2 border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 shadow-md hover:shadow-lg"
-          >
-            <Download className="h-5 w-5" />
-            Download CV
-          </a>
-        </div>
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-6 mb-12 max-w-2xl">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-4xl md:text-5xl font-bold mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm md:text-base text-slate-600 dark:text-slate-400">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
 
-        <div className="flex flex-col items-center gap-4">
-          <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">
-            Connect with me
-          </span>
+          {/* Engineering Focus Icons */}
+          <div className="mb-8">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">
+              ENGINEERING FOCUS
+            </p>
+            <div className="flex gap-4">
+              {[Code2, Database, Cloud, Cpu].map((Icon, i) => (
+                <div
+                  key={i}
+                  className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+                >
+                  <Icon className="h-6 w-6 text-slate-700 dark:text-slate-300" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Links */}
           <div className="flex gap-3">
             <a
               href="https://github.com/akashivu"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300 group"
-              aria-label="GitHub"
+              className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-400 transition"
             >
-              <Github className="h-5 w-5 text-slate-700 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" />
+              <Github className="h-5 w-5" />
             </a>
             <a
               href="https://linkedin.com/in/akash-patil"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300 group"
-              aria-label="LinkedIn"
+              className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-400 transition"
             >
-              <Linkedin className="h-5 w-5 text-slate-700 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" />
+              <Linkedin className="h-5 w-5" />
             </a>
             <a
               href="mailto:akashivu002@gmail.com"
-              className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300 group"
-              aria-label="Email"
+              className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-400 transition"
             >
-              <Mail className="h-5 w-5 text-slate-700 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" />
+              <Mail className="h-5 w-5" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-slate-300 dark:border-slate-700 flex justify-center p-1">
-          <div className="w-1.5 h-3 bg-purple-600 dark:bg-purple-400 rounded-full"></div>
+      {/* Vertical Name Accent */}
+      <div className="hidden lg:block fixed right-10 top-1/2 -translate-y-1/2 z-10">
+        <div
+          className="text-6xl font-bold text-gray-500 dark:text-slate-700 tracking-wider"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          Akash Patil
         </div>
-      </div>
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-200 dark:bg-purple-900/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-300 dark:bg-purple-800/20 rounded-full blur-3xl"></div>
       </div>
     </section>
   );
